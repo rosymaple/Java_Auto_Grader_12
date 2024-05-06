@@ -3,6 +3,10 @@ package week_10.q2_github;
 
 public class GitHubRepository {
 
+    public String name;     // we need a username
+    public String language;     // we need a location from our user
+    public Double size;            // we need a Double variable "size" for how large the repository is in KB.
+
     /*
         TODO finish this class.
             This should contain fields for a

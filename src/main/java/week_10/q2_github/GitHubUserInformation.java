@@ -1,5 +1,9 @@
 package week_10.q2_github;
 
+import kong.unirest.Unirest;
+
+
+import java.util.Map;
 
 import static input.InputUtils.stringInput;
 
@@ -17,6 +21,16 @@ public class GitHubUserInformation {
 
     public static GitHubUser getUserInformation(String gitHubUserName) {
 
+        String url = "https://api.github.com/users/" + gitHubUserName;
+
+        Map<String, Object> response = Unirest.get(url).asObject(Map.class).getBody();
+
+        GitHubUser user = new GitHubUser();
+        user.login = (String) response.get("login");
+        user.name = (String) response.get("name");
+        user.location = (String) response.get("location");
+
+        return user;
         /*
         *  The URL to request information about a user is in the form
         *   https://api.github.com/users/{{username}}
@@ -60,11 +74,24 @@ public class GitHubUserInformation {
         * For this lab, we'll assume the user will only enter login usernames of people who do have GitHub accounts.
         * */
 
-        return null;   // todo delete and replace with your own code
-
-    }
+    }       // end of getUserInformation method
 
     public static GitHubRepository[] getRepositories(GitHubUser user) {
+
+        String url = "https://api.github.com/users/" + user.login + "/repos";
+
+        Map<String, Object>[] response = Unirest.get(url).asObject(Map[].class).getBody();
+
+        GitHubRepository[] repositories = new GitHubRepository[response.length];
+
+        for (int i = 0; i < response.length; i++) {
+            Map<String, Object> repo = response[i];
+            GitHubRepository repository = new GitHubRepository();
+            repository.name = (String) repo.get("name");
+            repository.language = (String) repo.get("language");
+            repository.size = (Double) repo.get("size");
+            repositories[i] = repository;
+        }
 
         /*
          *  The URL to request information about a user's repositories is in the form
@@ -121,11 +148,22 @@ public class GitHubUserInformation {
          * display a "Not found" message to the user, and not crash.
          * */
 
-        return null;  // TODO delete and replace with your code
-    }
+        return repositories;
+    }       // end of GitHubRepository method. returns each "user" repository
 
 
     public static void displayGitHubUserInformation(GitHubUser user, GitHubRepository[] repositories) {
+
+        System.out.println("Login: " + user.login);
+        System.out.println("Name: " + user.name);
+        System.out.println("Location: " + user.location);
+        System.out.println("\nRepositories:");
+
+        for (GitHubRepository repository: repositories) {
+            System.out.println("Repository name: " + repository.name);
+            System.out.println("Language: " + repository.language);
+            System.out.println("Size: " + repository.size + " KB");
+        }
 
         // TODO display information about the GitHub user.
         //  Neatly display (print)
@@ -143,5 +181,5 @@ public class GitHubUserInformation {
         // You do not need to make any API calls in this method.
         // You do not need to return anything from this method.
 
-    }
+    }       // end of displayGitHubUserInformation method. prints information for our user.
 }

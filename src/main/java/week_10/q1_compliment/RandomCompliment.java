@@ -1,5 +1,8 @@
 package week_10.q1_compliment;
 
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
+import kong.unirest.Unirest;
 
 public class RandomCompliment {
 
@@ -10,9 +13,19 @@ public class RandomCompliment {
         System.out.println(compliment);
     }
 
+    public static class Compliment {
+        public String text;
+    }
 
     public static String getRandomCompliment() {
 
+        String url = "https://random-compliment.azurewebsites.net/random";
+
+        Compliment complimentObject = Unirest.get(url).asObject(Compliment.class).getBody();
+        // declare complimentObject from the body of the URL object
+
+//        System.out.println(complimentObject.text);    // instead of using this we will simply use a return statement
+        return complimentObject.text; // return to main
         /*
         * TODO use Unirest to make a request to the Random Compliment API, using the URL
         *
@@ -49,11 +62,5 @@ public class RandomCompliment {
         * If the API seems to be working - you see a random compliment - then check your code
         * for errors, and please email me if you need any help troubleshooting.
         * */
-
-
-        return null; // TODO delete and replace with your code
-
-    }
-
-
-}
+    }       // end of getRandomCompliment method
+}       // end of public class

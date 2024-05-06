@@ -3,6 +3,10 @@ package week_10.q2_github;
 
 public class GitHubUser {
 
+    public String login;        // these fields make up our GitHubUser object
+    public String name;
+    public String location;
+
     /*
         TODO finish this class.
             This should contain fields for a
