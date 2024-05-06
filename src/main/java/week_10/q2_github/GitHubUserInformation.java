@@ -21,16 +21,17 @@ public class GitHubUserInformation {
 
     public static GitHubUser getUserInformation(String gitHubUserName) {
 
-        String url = "https://api.github.com/users/" + gitHubUserName;
+        String url = "https://api.github.com/users/" + gitHubUserName;      // the API URL we must read from
 
         Map<String, Object> response = Unirest.get(url).asObject(Map.class).getBody();
+        // our map of our response from our API url, pull from the body of our response.
 
-        GitHubUser user = new GitHubUser();
-        user.login = (String) response.get("login");
-        user.name = (String) response.get("name");
-        user.location = (String) response.get("location");
+        GitHubUser user = new GitHubUser();     // new GitHubUser object
+        user.login = (String) response.get("login");        // pull this data from the URL. looks for "login"
+        user.name = (String) response.get("name");          // pull this data from the URL. looks for "name"
+        user.location = (String) response.get("location");      // pull this data from the URL. looks for "location"
 
-        return user;
+        return user;        // returns this whole method getUserInformation as "user"
         /*
         *  The URL to request information about a user is in the form
         *   https://api.github.com/users/{{username}}
@@ -76,22 +77,27 @@ public class GitHubUserInformation {
 
     }       // end of getUserInformation method
 
-    public static GitHubRepository[] getRepositories(GitHubUser user) {
+    public static GitHubRepository[] getRepositories(GitHubUser user) {     // getRepositories method
 
         String url = "https://api.github.com/users/" + user.login + "/repos";
+        // pulls from each user's own repositories. this is code that our user uploaded to github.
 
         Map<String, Object>[] response = Unirest.get(url).asObject(Map[].class).getBody();
+        // create a map object from our url variable. pulls from body of URL
 
-        GitHubRepository[] repositories = new GitHubRepository[response.length];
+        GitHubRepository[] repositories = new GitHubRepository[response.length];        // create an array...
+        // from our url.
+        // our Map object holds our data from our api url. it pulls info from the body of the api.
 
-        for (int i = 0; i < response.length; i++) {
-            Map<String, Object> repo = response[i];
-            GitHubRepository repository = new GitHubRepository();
-            repository.name = (String) repo.get("name");
-            repository.language = (String) repo.get("language");
-            repository.size = (Double) repo.get("size");
-            repositories[i] = repository;
-        }
+        for (int i = 0; i < response.length; i++) {     // for loop over our map of API responses...
+            Map<String, Object> repo = response[i];         // create another map object called repo
+            // represents a single response in our variable "response" aka a single repository
+            GitHubRepository repository = new GitHubRepository();       // new GitHubRepository object
+            repository.name = (String) repo.get("name");            // add name to object
+            repository.language = (String) repo.get("language");        // add language to object
+            repository.size = (Double) repo.get("size");        // add size to object...all in our loop.
+            repositories[i] = repository;           // add element (a user) to our repository object.
+        }       // end of for loop...
 
         /*
          *  The URL to request information about a user's repositories is in the form
@@ -154,15 +160,16 @@ public class GitHubUserInformation {
 
     public static void displayGitHubUserInformation(GitHubUser user, GitHubRepository[] repositories) {
 
-        System.out.println("Login: " + user.login);
-        System.out.println("Name: " + user.name);
-        System.out.println("Location: " + user.location);
-        System.out.println("\nRepositories:");
+        System.out.println("Login: " + user.login);         // we need to print these variables for our user
+        System.out.println("Name: " + user.name);           // these string print lines show our user information
+        System.out.println("Location: " + user.location);       // about each github user we are using this method for
+        System.out.println("\nRepositories:");                  // title our repositories info, and line break
 
-        for (GitHubRepository repository: repositories) {
-            System.out.println("Repository name: " + repository.name);
-            System.out.println("Language: " + repository.language);
-            System.out.println("Size: " + repository.size + " KB");
+        for (GitHubRepository repository: repositories) {       // loop through our repositories array.
+            // this array holds all of the information known about each git hub user.
+            System.out.println("Repository name: " + repository.name);      // print string for our user
+            System.out.println("Language: " + repository.language);     // print string for user
+            System.out.println("Size: " + repository.size + " KB");     // print string
         }
 
         // TODO display information about the GitHub user.
@@ -182,4 +189,4 @@ public class GitHubUserInformation {
         // You do not need to return anything from this method.
 
     }       // end of displayGitHubUserInformation method. prints information for our user.
-}
+}       // end of public class GitHubUserInformation
