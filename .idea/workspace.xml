@@ -19,33 +19,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="973dfb87-52db-448c-966c-e7a5a696eb0a" name="Default" comment="Fix small typo">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_konghq_unirest_java_standalone_3_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__edu_minneapolis_input_utils_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpasyncclient_4_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_nio_4_4_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_inline_3_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_10/q1_compliment/RandomCompliment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_10/q1_compliment/RandomCompliment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_10/q2_github/GitHubRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_10/q2_github/GitHubRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_10/q2_github/GitHubUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_10/q2_github/GitHubUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/week_10/q2_github/GitHubUserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week_10/q2_github/GitHubUserInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/week_10/q2_github/GitHubUserInformationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week_10/q2_github/GitHubUserInformationTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="973dfb87-52db-448c-966c-e7a5a696eb0a" name="Default" comment="Lab 10 completed, both programs should run" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,29 +148,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.GitHubUserInformation.executor": "Run",
-    "Application.RandomCompliment.executor": "Run",
-    "Application.week_10.q1_compliment.RandomCompliment.executor": "Run",
-    "JUnit.GitHubUserInformationTest.executor": "Run",
-    "JUnit.RandomComplimentTest.executor": "Run",
-    "JUnit.q1_compliment in Java_Auto_Grader_10.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/babyw/IdeaProjects/lab-10-java-apis-rosymaple",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.GitHubUserInformation.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RandomCompliment.executor&quot;: &quot;Run&quot;,
+    &quot;Application.week_10.q1_compliment.RandomCompliment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GitHubUserInformationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RandomComplimentTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.q1_compliment in Java_Auto_Grader_10.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.q2_github in Java_Auto_Grader_10.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/babyw/IdeaProjects/lab-10-java-apis-rosymaple&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="week_9" />
@@ -591,7 +566,7 @@
       <workItem from="1713886170722" duration="1665000" />
       <workItem from="1713910867322" duration="75000" />
       <workItem from="1714490251944" duration="1408000" />
-      <workItem from="1714952298535" duration="11453000" />
+      <workItem from="1714952298535" duration="12152000" />
     </task>
     <task id="LOCAL-00014" summary="Insect class structure checks">
       <created>1501951108302</created>
@@ -936,7 +911,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670012818167</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView">
@@ -991,7 +966,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="tidying tests and instructions" />
     <MESSAGE value="replacing mysql with sqlite" />
     <MESSAGE value="replaced mysql with sqlite" />
     <MESSAGE value="Specify that name is non-empty for new solver" />
@@ -1016,7 +990,8 @@
     <MESSAGE value="Replace Heroku-hosted API with Azure" />
     <MESSAGE value="Longer timeout" />
     <MESSAGE value="Fix small typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix small typo" />
+    <MESSAGE value="Lab 10 completed, both programs should run" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab 10 completed, both programs should run" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

@@ -13,13 +13,14 @@ public class RandomCompliment {
         System.out.println(compliment);
     }
 
-    public static class Compliment {
-        public String text;
-    }
+    public static class Compliment {        // our Compliment class needs to be public static to use in our program
+        public String text;         // our Compliment will contain one String variable "text"
+    }       // end of Compliment class
 
-    public static String getRandomCompliment() {
+    public static String getRandomCompliment() {        // our getRandomCompliment method
 
-        String url = "https://random-compliment.azurewebsites.net/random";
+        String url = "https://random-compliment.azurewebsites.net/random";      // our api will run from this URL
+        // sets URL to a variable we can work with.
 
         Compliment complimentObject = Unirest.get(url).asObject(Compliment.class).getBody();
         // declare complimentObject from the body of the URL object
